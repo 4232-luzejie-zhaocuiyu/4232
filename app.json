@@ -1,0 +1,48 @@
+{
+    "pages": [
+        "pages/me/me",
+        "pages/mortgage/mortgage",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/mortgage/detail/detail",
+        "pages/calculator-index/index",
+        "pages/calculator-history/history",
+        "pages/ruzhi/ruzhi",
+        "pages/tax/tax",
+        "pages/wxyj/wxyj",
+        "pages/date/date",
+        "pages/cand/cand",
+        "pages/backday/backday",
+        "pages/meituan/meituan"
+
+    ],
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#ededed",
+        "backgroundTextStyle": "light",
+        "backgroundColor": "#ffffff",
+        "navigationBarTitleText": " "
+    },
+    "tabBar": {
+        "color": "#7A7E83",
+        "selectedColor": "#86b3ec",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "image/shouye1.jpg",
+                "selectedIconPath": "image/shouye2.jpg",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "iconPath": "image/wode1.jpg",
+                "selectedIconPath": "image/wode2.jpg",
+                "text": "我的"
+            }
+        ]
+    },
+    "navigateToMiniProgramAppIdList": ["wx2c348cf579062e56"],
+    "sitemapLocation": "sitemap.json"
+}
