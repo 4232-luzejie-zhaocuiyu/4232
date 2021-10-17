@@ -1,0 +1,7 @@
+<view>
+    <navigator class="btn" target="miniProgram" open-type="navigate" app-id="wx2c348cf579062e56" version="trial">
+      <swiper-item>
+        <image src="{{item.img}}" class="slide-image banner-img" />
+      </swiper-item>
+    </navigator>
+</view>

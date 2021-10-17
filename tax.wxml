@@ -1,0 +1,113 @@
+<form bindsubmit='formSubmit'>
+ <view class="weui-cells weui-cells_after-title">     
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">税前工资</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input type="digit" class="weui-input" name="beforeTax" value='{{form.beforeTax}}'/>
+          </view>
+          <view class="weui-cell__ft">元</view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">五险一金</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input type="digit" class="weui-input" name="insurance" value="{{form.insurance}}"/>
+          </view>
+          <view class="weui-cell__ft">元</view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">附加扣除</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input type="number" class="weui-input" name="otherDeduct" value="{{form.otherDeduct}}"/>
+          </view>
+          <view class="weui-cell__ft">元</view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">个税起征</view>
+          </view>
+          <view class="weui-cell__bd">
+              <input class="weui-input" name="threshold" disabled='disabled'  value="5000"/>
+          </view>
+          <view class="weui-cell__ft">元</view>
+      </view>
+      <view class="weui-btn-area">
+            <button class="weui-btn green-btn" hover-class="green-hover-class" form-type="submit" >计算</button>
+        </view>
+</view>
+<view class="weui-cells__title">计算结果</view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+        <view class="weui-label">应纳所得</view>
+    </view>
+    <view class="weui-cell__bd">
+        {{ resAfterDeduct }}
+    </view>
+    <view class="weui-cell__ft">元</view>
+</view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+        <view class="weui-label">适用税率</view>
+    </view>
+    <view class="weui-cell__bd">
+        {{ resTaxRate }}
+    </view>
+    <view class="weui-cell__ft">%</view>
+</view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+        <view class="weui-label">速算扣除</view>
+    </view>
+    <view class="weui-cell__bd">
+        {{ resQuickDeduct }}
+    </view>
+    <view class="weui-cell__ft">元</view>
+</view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+        <view class="weui-label">应缴税款</view>
+    </view>
+    <view class="weui-cell__bd">
+        {{ resTax }}
+    </view>
+    <view class="weui-cell__ft">元</view>
+</view>
+<view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+        <view class="weui-label">税后工资</view>
+    </view>
+    <view class="weui-cell__bd">
+        {{ resAfterTax }}
+    </view>
+    <view class="weui-cell__ft">元</view>
+</view>
+ 
+<view class="table">
+      <view class="tr">
+        <view class="th">个人所得税税率表</view>       
+      </view>
+      <view class="tr">
+        <view class="th th1">级数</view>
+        <view class="th th2">应纳税所得额</view>
+        <view class="th th3">税率(%)</view>
+        <view class="th th4">速算扣除数</view>
+      </view>
+      <block wx:for="{{taxArray}}" wx:key="level">
+        <view class='tr {{ item.level % 2 == 0 ? "rowColor":"" }}'>
+          <view class="td th1">{{item.level}}</view>
+          <view class="td th2">{{item.name}}</view>
+          <view class="td th3">{{item.rate}}</view>
+          <view class="td th4">{{item.deduct}}</view>
+        </view>
+      </block>
+</view>
+ 
+<view class="weui-footer weui-footer_fixed-bottom">    
+    <view class="weui-footer__text">Copyright © 2019 jlc</view>
+</view>
+</form>

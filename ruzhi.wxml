@@ -1,0 +1,27 @@
+<!--jinianri.wxml-->
+<!--入职纪念日-->
+<view class='container'>
+<!--结果展示区-->
+  <view class='result'>
+    <view class='resultHint'><text class=''>我已经入职：</text></view>
+    <view class=''><text class='resultDays'>{{days}}</text><text class='resultHint2'>天啦</text></view>
+  </view>
+
+
+<!--设置区-->
+
+  <view>
+      <picker  mode="date" value="{{settingDate}}" start="1927-08-01"  bindchange='bindDateChange'>
+        <view class='picker'>
+          <text >入职时间为: {{settingDate}}</text> 
+          <text >></text>
+        </view>
+      </picker>
+  </view>
+
+<!--提示区-->
+
+<!--分享操作区-->
+
+
+</view>

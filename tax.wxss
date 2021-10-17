@@ -1,0 +1,51 @@
+.green-btn{
+    background-color: #ededed;
+    color:#000000;
+  }
+  .green-hover-class{
+    background-color: #000000;
+    color:#ededed;
+  }
+  .table {
+  border: 1px solid #ccc;
+  border-right: 0;
+  border-bottom: 0;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  }
+   
+  .tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
+   
+  .th, .td {
+  padding: 5px;
+  border-bottom: 1px solid #c2bdbd;
+  border-right: 1px solid #c2bdbd;
+  text-align: center;
+  width: 100%;
+  font-size:12px;
+  }
+   
+  .th {
+  font-weight: 400;
+  background-color: #dadada;
+  }
+  .th1{
+    width:9%;
+  }
+  .th2{
+    width:55%;
+  }
+  .th3{
+    width:15%;
+  }
+  .th4{
+    width:21%;
+  }
+  .rowColor{
+    background-color: #dadada;
+  }

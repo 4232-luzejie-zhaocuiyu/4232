@@ -1,0 +1,114 @@
+<!--index.wxml-->
+<view class="container">
+
+    <!-- screen -->
+    <view class="screen">
+        <view plain="true" wx:for-items="{{lines}}" wx:for-index="idx" wx:for-item="line" wx:key="unique">
+            <button wx:if="{{idx == 4}}" class="current" plain="true">{{line}}</button>
+            <button wx:else plain="true">{{line}}</button>
+        </view>
+    </view>
+    <!-- keyboard -->
+    <view class="keyboard">
+    <view class="key-rows">
+       <view id="of" class="key2" bindtap="bindViewTapOpt"></view>
+       <view id="c" class="key" bindtap="bindViewTapOpt"></view>
+       <view id="ac" class="key" bindtap="bindViewTapOpt"></view>
+    </view>
+    <view class="key-rows">
+       <view id="7" class="key" bindtap="bindViewTapInput"></view>
+       <view id="8" class="key" bindtap="bindViewTapInput"></view>
+       <view id="9" class="key" bindtap="bindViewTapInput"></view>
+        <view id="÷" class="key" bindtap="bindViewTapOpt"></view>
+    </view>
+    <view class="key-rows">
+       <view id="4" class="key" bindtap="bindViewTapInput"></view>
+       <view id="5" class="key" bindtap="bindViewTapInput"></view>
+       <view id="6" class="key" bindtap="bindViewTapInput"></view>
+        <view id="×" class="key" bindtap="bindViewTapOpt"></view>
+    </view>
+    <view class="key-rows">
+       <view id="1" class="key" bindtap="bindViewTapInput"></view>
+       <view id="2" class="key" bindtap="bindViewTapInput"></view>
+       <view id="3"class="key" bindtap="bindViewTapInput"></view>
+        <view id="-" class="key" bindtap="bindViewTapOpt"></view>
+    </view>
+    <view class="key-rows">
+       <view id="0" class="key" bindtap="bindViewTapInput"></view>
+       <view id="." class="key" bindtap="bindViewTapOpt"></view>
+       <view id="="class="key" bindtap="bindViewTapOpt"></view>
+        <view id="+" class="key" bindtap="bindViewTapOpt"></view>
+    </view>
+
+    <view class="key-rows">
+     <view class= "key2">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="of" style="position: relative; left: 0rpx; top: -12rpx">OFF/ON</button> </view>
+      <view class= "key">
+        <button class="botton" bindtap="bindViewTapOpt" type="default" id="ac">C</button>
+    </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="c">AC</button>
+    </view>
+</view>
+
+    <view class="key-rows">
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="7">7</button>
+      </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="8">8</button>
+      </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="9">9</button>
+      </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="÷">÷</button>
+    </view>
+    </view>
+
+
+    <view class="key-rows">
+   <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="4">4</button>
+    </view><view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="5">5</button> </view>
+      <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="6">6</button>
+    </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="×">×</button>
+    </view>
+    </view>
+
+
+    <view class="key-rows">
+   <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="1">1</button> </view>
+      <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="2">2</button>
+    </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="3">3</button> </view>
+      <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="-">-</button>
+    </view>
+    </view>
+
+
+    <view class="key-rows">
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapInput" type="default" id="0">0</button> </view>
+      <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id=".">.</button>
+    </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="=">=</button>
+    </view>
+    <view class= "key">
+      <button class="botton" bindtap="bindViewTapOpt" type="default" id="+">+</button>
+    </view>
+    </view>
+</view>
+</view>
+
+

@@ -1,0 +1,13 @@
+<view class="content-box" style="height:{{canUseHeight + 'px'}}">
+  <view class="content-box-item">
+    <text class="text01">
+    WorkAholic
+    一个为工作提供便利功能的小程序。
+    使用时有任何问题欢迎提交反馈~
+  </text>
+    <image src="/images/other/wechat.jpg" class="img01"></image>
+    <text class="text02"></text>
+  </view>
+
+</view>
+
